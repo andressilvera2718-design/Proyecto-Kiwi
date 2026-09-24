@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Analizador de mangos con inteligencia artificial.">
-  <title>Mango Vision | Analizador inteligente</title>
+  <meta name="description" content="Analizador inteligente de kiwis con IA.">
+  <title>Kiwi Vision | Analizador inteligente</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;700&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="./" aria-label="Mango Vision inicio">
-        <span class="brand-mark" aria-hidden="true">M</span>
-        <span>Mango <strong>Vision</strong></span>
+      <a class="brand" href="./" aria-label="Kiwi Vision inicio">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span>Kiwi <strong>Vision</strong></span>
       </a>
       <div class="model-status"><span class="status-dot"></span><span id="model-status">Modelo listo para cargar</span></div>
     </header>
@@ -24,27 +24,27 @@
       <section class="intro">
         <div>
           <p class="eyebrow">Laboratorio de calidad</p>
-          <h1>Conoce tu mango<br><em>en un vistazo.</em></h1>
-          <p class="intro-copy">Apunta la cámara o sube una imagen. La inteligencia artificial analizará la fruta y mostrará la categoría con su nivel de confianza.</p>
+          <h1>Descubre tu kiwi<br><em>con una mirada IA.</em></h1>
+          <p class="intro-copy">Carga una imagen o usa la cámara para identificar la calidad del kiwi y obtener su nivel de confianza con inteligencia artificial.</p>
         </div>
-        <div class="intro-note"><span>01</span><p>Coloca un solo mango<br>en el centro del encuadre.</p></div>
+        <div class="intro-note"><span>01</span><p>Coloca un kiwi entero<br>en el centro del encuadre.</p></div>
       </section>
 
-      <section class="workspace" aria-label="Analizador de mangos">
+      <section class="workspace" aria-label="Analizador de kiwis">
         <div class="capture-panel">
           <div class="panel-heading">
-            <div><p class="section-kicker">Entrada de imagen</p><h2>Observa tu fruta</h2></div>
+            <div><p class="section-kicker">Entrada de imagen</p><h2>Observa tu fruto</h2></div>
             <span class="live-pill" id="input-mode">Sin imagen</span>
           </div>
 
           <div class="preview-wrap" id="preview-wrap">
             <div class="preview-empty" id="preview-empty">
-              <div class="camera-icon" aria-hidden="true">⌁</div>
-              <h3>Tu imagen aparecerá aquí</h3>
-              <p>Usa la cámara o elige una foto desde tu dispositivo.</p>
+              <div class="camera-icon" aria-hidden="true">◌</div>
+              <h3>Tu kiwi aparecerá aquí</h3>
+              <p>Usa la cámara o sube una foto desde tu dispositivo.</p>
             </div>
             <div id="webcam-container" class="media-container" hidden></div>
-            <img id="image-preview" class="media-container" alt="Vista previa del mango" hidden>
+            <img id="image-preview" class="media-container" alt="Vista previa del kiwi" hidden>
             <div class="scan-line" id="scan-line" hidden></div>
           </div>
 
@@ -54,7 +54,7 @@
             <input id="file-input" type="file" accept="image/*" hidden>
           </div>
           <button class="text-button" id="stop-camera" type="button" hidden>Detener cámara</button>
-          <p class="permission-note" id="permission-note">El análisis se ejecuta en tu navegador. Tus imágenes no se guardan.</p>
+          <p class="permission-note" id="permission-note">El análisis se realiza en tu navegador y no se guardan tus fotos.</p>
         </div>
 
         <aside class="results-panel">
@@ -62,16 +62,16 @@
           <div class="result-state" id="result-state">
             <div class="result-orbit"><span></span></div>
             <h3>Esperando una imagen</h3>
-            <p>Elige una entrada para comenzar el análisis.</p>
+            <p>Selecciona una entrada para iniciar el análisis.</p>
           </div>
           <div class="predictions" id="label-container" aria-live="polite"></div>
-          <div class="tip-box"><span class="tip-icon">✦</span><div><strong>Para mejorar la lectura</strong><p>Usa buena luz y evita que el fondo tenga muchos objetos.</p></div></div>
+          <div class="tip-box"><span class="tip-icon">✦</span><div><strong>Para mejorar la lectura</strong><p>Usa buena iluminación y evita fondos con muchos elementos.</p></div></div>
         </aside>
       </section>
 
-      <section class="how-it-works"><p class="section-kicker">Flujo de análisis</p><div class="steps"><div><span>1</span><strong>Captura</strong><p>Una foto clara de tu mango.</p></div><div><span>2</span><strong>Procesa</strong><p>El modelo compara sus características.</p></div><div><span>3</span><strong>Decide</strong><p>Revisa la categoría más probable.</p></div></div></section>
+      <section class="how-it-works"><p class="section-kicker">Flujo de análisis</p><div class="steps"><div><span>1</span><strong>Captura</strong><p>Una foto clara del kiwi.</p></div><div><span>2</span><strong>Procesa</strong><p>El modelo analiza sus rasgos.</p></div><div><span>3</span><strong>Decide</strong><p>Revisa la categoría más probable.</p></div></div></section>
     </main>
-    <footer><span>Mango Vision</span><span>Clasificación experimental con IA</span></footer>
+    <footer><span>Kiwi Vision</span><span>Clasificación experimental con IA</span></footer>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>

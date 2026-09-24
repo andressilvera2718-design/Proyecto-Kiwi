@@ -1,4 +1,4 @@
-const MODEL_URL = 'https://teachablemachine.withgoogle.com/models/acj_H8Np2/';
+const MODEL_URL = 'https://teachablemachine.withgoogle.com/models/gPUKdIoYH/';
 
 let model;
 let webcam;
@@ -26,6 +26,7 @@ async function loadModel() {
     model = await tmImage.load(`${MODEL_URL}model.json`, `${MODEL_URL}metadata.json`);
     classCount = model.getTotalClasses();
     elements.status.textContent = 'Modelo listo para analizar';
+    elements.status.parentElement.classList.remove('error');
   } catch (error) {
     elements.status.textContent = 'No se pudo cargar el modelo';
     elements.status.parentElement.classList.add('error');
